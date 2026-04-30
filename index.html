@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Geruso Detailing — Mobile Detailing in North Providence, RI</title>
+  <meta name="description" content="Owner-operated mobile detailing in North Providence and Mapleville, RI. Hand wash, full interior, ceramic finish. We come to your driveway." />
+  <meta name="theme-color" content="#0A0A0B" />
+
+  <meta property="og:title" content="Geruso Detailing — Mobile Detailing in North Providence, RI" />
+  <meta property="og:description" content="Mobile detailing done right. Hand wash, full interior, ceramic finish — at your driveway." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/logo.png" />
+
+  <link rel="icon" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0A0A0B',
+            surface: '#131316',
+            line: 'rgba(255,255,255,0.08)',
+            brand: { 400: '#94E458', 500: '#7DD142', 600: '#5FB42A', 700: '#4A8E20' },
+          },
+          fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+      background: #0A0A0B;
+      color: #E8E9EC;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Subtle vignette/glow that matches the logo's black bg seamlessly */
+    .glow {
+      background:
+        radial-gradient(700px 380px at 75% 20%, rgba(125,209,66,0.10), transparent 65%),
+        radial-gradient(600px 400px at 10% 90%, rgba(125,209,66,0.05), transparent 65%);
+    }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Tier card */
+    .card { transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+    .card:hover { transform: translateY(-3px); border-color: rgba(148,228,88,0.35); }
+    .card.featured { border-color: rgba(148,228,88,0.4); }
+    .card.featured:hover { border-color: rgba(148,228,88,0.55); }
+
+    /* Nav glass */
+    .nav { background: rgba(10,10,11,.7); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+    /* Form */
+    .field {
+      width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 13px 15px; color: #E8E9EC; outline: none;
+      transition: border-color .2s, background .2s; font: inherit;
+    }
+    .field:focus { border-color: rgba(148,228,88,0.5); background: rgba(255,255,255,0.06); }
+    .field::placeholder { color: rgba(255,255,255,0.35); }
+
+    /* Image hover */
+    .img-hover img { transition: transform .7s ease; }
+    .img-hover:hover img { transform: scale(1.03); }
+
+    /* Section divider */
+    .hr {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent);
+    }
+
+    /* Button focus visible */
+    a:focus-visible, button:focus-visible { outline: 2px solid #94E458; outline-offset: 3px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+  <!-- ─────────── NAV ─────────── -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 nav">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[68px] flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="img/logo.png" alt="Geruso Detailing logo" class="w-10 h-10 rounded-md object-contain" />
+        <div class="leading-tight hidden sm:block">
+          <div class="font-semibold tracking-tight text-[15px]">Geruso Detailing</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-white/45 -mt-0.5">North Providence · RI</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-[14px] text-white/70">
+        <a href="#services" class="hover:text-white transition">Services</a>
+        <a href="#work" class="hover:text-white transition">Our Work</a>
+        <a href="#mobile" class="hover:text-white transition">Mobile</a>
+        <a href="#reviews" class="hover:text-white transition">Reviews</a>
+      </nav>
+      <a href="#book" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-500 text-ink font-semibold text-[14px] hover:bg-brand-400 transition">
+        Get a Quote
+      </a>
+    </div>
+  </header>
+
+  <!-- ─────────── HERO ─────────── -->
+  <section id="top" class="glow relative pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-[12px] text-white/65 mb-7">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+          Mobile detailing · Rhode Island
+        </div>
+        <h1 class="text-[44px] sm:text-6xl lg:text-7xl font-extrabold leading-[1.02] tracking-tight">
+          Detailing done right.<br/>
+          <span class="text-brand-500">At your driveway.</span>
+        </h1>
+        <p class="mt-6 text-[17px] leading-relaxed text-white/65 max-w-xl">
+          Owner-operated mobile detailing for cars, SUVs, trucks, and motorcycles in North Providence and Mapleville. Hand wash, full interior, ceramic finish — done on-site by Cameron Geruso.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#book" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">
+            Get a Free Quote
+          </a>
+          <a href="sms:+14014901236" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-line text-white hover:bg-white/5 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            401-490-1236
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-3 gap-6 max-w-lg">
+          <div>
+            <div class="text-3xl font-bold text-white">5★</div>
+            <div class="text-xs text-white/55 mt-1">Customer rated</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white">10%</div>
+            <div class="text-xs text-white/55 mt-1">Off first detail</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white">RI</div>
+            <div class="text-xs text-white/55 mt-1">Mobile service</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative aspect-square rounded-2xl bg-ink border border-line p-8 lg:p-12 grid place-items-center overflow-hidden">
+          <div class="absolute inset-0 -z-0" style="background: radial-gradient(circle at center, rgba(125,209,66,0.16), transparent 60%);"></div>
+          <img src="img/logo.png" alt="Geruso Detailing" class="relative w-full max-w-[420px] object-contain drop-shadow-2xl" />
+        </div>
+        <p class="mt-4 text-center text-xs text-white/40 italic">"Bringing you excellence through quality, one detail at a time."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── SERVICES ─────────── -->
+  <section id="services" class="py-24 lg:py-28 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="reveal max-w-2xl">
+        <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Packages</div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">Three packages. Real pricing.</h2>
+        <p class="text-white/60 mt-4 text-[16px] leading-relaxed">Pricing starts at the listed rate. Final quote depends on vehicle size and condition — text us a photo and we'll send you a number in under 30 minutes.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-12">
+        <!-- Basic -->
+        <div class="reveal card rounded-xl border border-line bg-surface p-7 flex flex-col">
+          <div class="text-white/45 text-[12px] uppercase tracking-[0.18em] font-semibold">Basic</div>
+          <div class="mt-5 flex items-baseline gap-1.5">
+            <span class="text-white/45 text-sm">starts at</span>
+            <span class="text-4xl font-extrabold text-white">$85</span>
+          </div>
+          <p class="text-white/55 text-[14px] mt-3">A fresh, professional hand wash to get you back to clean.</p>
+          <ul class="mt-7 space-y-3 text-[14px] text-white/80 flex-1">
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full hand wash, exterior</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Wheel &amp; tire rinse</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Streak-free dry</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Air freshener</li>
+          </ul>
+          <a href="#book" class="mt-8 inline-flex items-center justify-center px-5 py-3 rounded-md border border-line text-white hover:bg-white/5 transition">Book Basic</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="reveal card featured relative rounded-xl border bg-surface p-7 flex flex-col">
+          <div class="absolute -top-2.5 left-7 px-2.5 py-0.5 rounded bg-brand-500 text-ink text-[11px] font-bold uppercase tracking-wider">Most popular</div>
+          <div class="text-brand-500 text-[12px] uppercase tracking-[0.18em] font-semibold">Premium</div>
+          <div class="mt-5 flex items-baseline gap-1.5">
+            <span class="text-white/45 text-sm">starts at</span>
+            <span class="text-4xl font-extrabold text-white">$170</span>
+          </div>
+          <p class="text-white/65 text-[14px] mt-3">Inside and out. The package most clients pick.</p>
+          <ul class="mt-7 space-y-3 text-[14px] text-white/85 flex-1">
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Everything in Basic</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full interior detail &amp; vacuum</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Dashboard &amp; trim conditioning</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tire shine</li>
+          </ul>
+          <a href="#book" class="mt-8 inline-flex items-center justify-center px-5 py-3 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">Book Premium</a>
+        </div>
+
+        <!-- Ultra -->
+        <div class="reveal card rounded-xl border border-line bg-surface p-7 flex flex-col">
+          <div class="text-white/45 text-[12px] uppercase tracking-[0.18em] font-semibold">Ultra Premium</div>
+          <div class="mt-5 flex items-baseline gap-1.5">
+            <span class="text-white/45 text-sm">starts at</span>
+            <span class="text-4xl font-extrabold text-white">$245</span>
+          </div>
+          <p class="text-white/55 text-[14px] mt-3">The full treatment — ceramic-coated, mirror-finish results.</p>
+          <ul class="mt-7 space-y-3 text-[14px] text-white/80 flex-1">
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Everything in Premium</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ceramic wax finish</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Long-lasting hydrophobic shield</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Glass &amp; trim sealant</li>
+          </ul>
+          <a href="#book" class="mt-8 inline-flex items-center justify-center px-5 py-3 rounded-md border border-line text-white hover:bg-white/5 transition">Book Ultra</a>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-3 mt-10 text-[14px] text-white/65">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Cars · SUVs · Trucks · Motorcycles
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          10% off your first appointment
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Memberships &amp; commercial fleets
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── BEFORE / AFTER + GALLERY ─────────── -->
+  <section id="work" class="py-24 lg:py-28 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="reveal flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-xl">
+          <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Our Work</div>
+          <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">Real cars. Real results.</h2>
+        </div>
+        <p class="text-white/60 max-w-md text-[16px]">A recent interior detail — same vehicle, same day. No filters, no edits.</p>
+      </div>
+
+      <!-- His real before/after composite -->
+      <div class="reveal mt-10 rounded-xl overflow-hidden border border-line bg-surface">
+        <img src="img/before-after.png" alt="Before and after interior detail" class="w-full h-auto" />
+      </div>
+
+      <!-- Real photos from his portfolio -->
+      <div class="grid sm:grid-cols-2 gap-5 mt-5">
+        <div class="reveal img-hover rounded-xl overflow-hidden border border-line bg-surface aspect-[4/5]">
+          <img src="img/work-1.jpg" alt="Detailed Subaru interior" class="w-full h-full object-cover" />
+        </div>
+        <div class="reveal img-hover rounded-xl overflow-hidden border border-line bg-surface aspect-[4/5]">
+          <img src="img/work-2.jpg" alt="Detailed sport interior with red accents" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── MOBILE SERVICE ─────────── -->
+  <section id="mobile" class="py-24 lg:py-28 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="reveal max-w-2xl">
+        <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Mobile Service</div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">We come to you.</h2>
+        <p class="text-white/60 mt-4 text-[16px] leading-relaxed max-w-lg">Stay home. We arrive with water, power, and every product needed to leave your vehicle better than new — at your driveway, your office, or your shop.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+        <div class="reveal rounded-xl border border-line bg-surface p-6">
+          <div class="w-9 h-9 rounded-md bg-brand-500/15 grid place-items-center mb-4">
+            <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="font-semibold">Service area</div>
+          <p class="text-white/55 text-[13px] mt-1.5 leading-relaxed">North Providence &amp; Mapleville, RI. Distance fees may apply outside core area.</p>
+        </div>
+        <div class="reveal rounded-xl border border-line bg-surface p-6">
+          <div class="w-9 h-9 rounded-md bg-brand-500/15 grid place-items-center mb-4">
+            <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="font-semibold">Same-week booking</div>
+          <p class="text-white/55 text-[13px] mt-1.5 leading-relaxed">Most appointments fit within a few days. Weekend slots fill fast.</p>
+        </div>
+        <div class="reveal rounded-xl border border-line bg-surface p-6">
+          <div class="w-9 h-9 rounded-md bg-brand-500/15 grid place-items-center mb-4">
+            <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+          </div>
+          <div class="font-semibold">All vehicles</div>
+          <p class="text-white/55 text-[13px] mt-1.5 leading-relaxed">Cars, SUVs, trucks, motorcycles. Commercial fleets welcome.</p>
+        </div>
+        <div class="reveal rounded-xl border border-line bg-surface p-6">
+          <div class="w-9 h-9 rounded-md bg-brand-500/15 grid place-items-center mb-4">
+            <svg class="w-4 h-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="font-semibold">Loyalty &amp; memberships</div>
+          <p class="text-white/55 text-[13px] mt-1.5 leading-relaxed">Recurring details and 10% off your first appointment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── REVIEWS ─────────── -->
+  <section id="reviews" class="py-24 lg:py-28 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="reveal max-w-2xl">
+        <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Reviews</div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">What clients say.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-12">
+        <figure class="reveal rounded-xl border border-line bg-surface p-7">
+          <div class="flex gap-0.5 text-brand-500 mb-4">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+          </div>
+          <blockquote class="text-white/85 text-[15px] leading-relaxed">"I was impressed by the thoroughness and professionalism. My car feels brand new!"</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-500 font-semibold grid place-items-center">J</div>
+            <div><div class="text-white text-[14px]">Jonathan</div><div class="text-white/40 text-[11px]">Verified client</div></div>
+          </figcaption>
+        </figure>
+        <figure class="reveal rounded-xl border border-line bg-surface p-7">
+          <div class="flex gap-0.5 text-brand-500 mb-4">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+          </div>
+          <blockquote class="text-white/85 text-[15px] leading-relaxed">"Outstanding attention to detail! Geruso Detailing truly goes the extra mile."</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-500 font-semibold grid place-items-center">S</div>
+            <div><div class="text-white text-[14px]">Sophia</div><div class="text-white/40 text-[11px]">Verified client</div></div>
+          </figcaption>
+        </figure>
+        <figure class="reveal rounded-xl border border-line bg-surface p-7">
+          <div class="flex gap-0.5 text-brand-500 mb-4">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 14.39 8.26 21 9.27l-5 4.87L17.18 21 12 17.77 6.82 21 8 14.14l-5-4.87 6.61-1.01z"/></svg>
+          </div>
+          <blockquote class="text-white/85 text-[15px] leading-relaxed">"Professional, efficient, and courteous. I highly recommend Geruso Detailing!"</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-500 font-semibold grid place-items-center">E</div>
+            <div><div class="text-white text-[14px]">Ethan</div><div class="text-white/40 text-[11px]">Verified client</div></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── BOOK / CTA ─────────── -->
+  <section id="book" class="py-24 lg:py-28 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12">
+      <div class="reveal">
+        <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Book</div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">Get a free quote.</h2>
+        <p class="text-white/60 mt-4 text-[16px] leading-relaxed max-w-lg">Tell us about your vehicle. We'll text back with availability and pricing — usually within 30 minutes.</p>
+
+        <div class="mt-9 space-y-4">
+          <a href="tel:+14014901236" class="flex items-center gap-4 p-5 rounded-xl border border-line bg-surface hover:bg-white/5 transition">
+            <div class="w-11 h-11 rounded-md bg-brand-500/15 grid place-items-center shrink-0">
+              <svg class="w-5 h-5 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Call</div>
+              <div class="text-[17px] font-semibold mt-0.5">401-490-1236</div>
+            </div>
+          </a>
+
+          <a href="sms:+14014901236" class="flex items-center gap-4 p-5 rounded-xl border border-line bg-surface hover:bg-white/5 transition">
+            <div class="w-11 h-11 rounded-md bg-brand-500/15 grid place-items-center shrink-0">
+              <svg class="w-5 h-5 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Text</div>
+              <div class="text-[17px] font-semibold mt-0.5">Send a photo of your car</div>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4 p-5 rounded-xl border border-line bg-surface">
+            <div class="w-11 h-11 rounded-md bg-brand-500/15 grid place-items-center shrink-0">
+              <svg class="w-5 h-5 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Hours</div>
+              <div class="text-[15px] font-medium mt-0.5">Mon–Sat · 8am–6pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="quote" class="reveal rounded-xl border border-line bg-surface p-7 lg:p-9">
+        <div class="text-2xl font-extrabold tracking-tight">Request a quote</div>
+        <p class="text-white/55 text-[14px] mt-1">Average response: under 30 minutes.</p>
+        <div class="grid sm:grid-cols-2 gap-4 mt-6">
+          <div>
+            <label class="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Your name</label>
+            <input class="field mt-2" type="text" name="name" placeholder="First &amp; last" required />
+          </div>
+          <div>
+            <label class="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Phone</label>
+            <input class="field mt-2" type="tel" name="phone" placeholder="(401) 555-0123" required />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Vehicle</label>
+            <input class="field mt-2" type="text" name="vehicle" placeholder="Year, make, model — e.g., 2021 Honda Civic" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Package</label>
+            <select class="field mt-2" name="package">
+              <option>Basic — $85</option>
+              <option selected>Premium — $170</option>
+              <option>Ultra Premium — $245</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Anything we should know?</label>
+            <textarea class="field mt-2 min-h-[110px]" name="notes" placeholder="Pet hair, scratches, mobile location preferred…"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="mt-7 w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">
+          Send Quote Request
+        </button>
+        <div id="quoteOk" class="hidden mt-5 p-4 rounded-md border border-brand-500/30 bg-brand-500/10 text-brand-400 text-sm">
+          Thanks — we'll text you within 30 minutes.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="border-t border-line bg-ink py-14">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3">
+          <img src="img/logo.png" alt="Geruso Detailing" class="w-10 h-10 object-contain" />
+          <div class="font-semibold tracking-tight">Geruso Detailing LLC</div>
+        </div>
+        <p class="text-white/55 text-[14px] mt-4 max-w-md leading-relaxed italic">"Bringing you excellence through quality, one detail at a time."</p>
+        <p class="text-white/40 text-[12px] mt-5">Owner-operated by Cameron Geruso · North Providence &amp; Mapleville, RI</p>
+      </div>
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-semibold">Contact</div>
+        <ul class="mt-4 space-y-2 text-[14px] text-white/70">
+          <li><a href="tel:+14014901236" class="hover:text-brand-500 transition">401-490-1236</a></li>
+          <li><a href="sms:+14014901236" class="hover:text-brand-500 transition">Text us</a></li>
+          <li class="text-white/45">Mon–Sat · 8am–6pm</li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-semibold">Follow</div>
+        <ul class="mt-4 space-y-2 text-[14px] text-white/70">
+          <li><a href="#" class="hover:text-brand-500 transition">Instagram</a></li>
+          <li><a href="#" class="hover:text-brand-500 transition">Facebook</a></li>
+          <li><a href="#" class="hover:text-brand-500 transition">Google Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-6 border-t border-line flex flex-col sm:flex-row justify-between gap-3 text-[12px] text-white/35">
+      <div>© <span id="yr"></span> Geruso Detailing LLC. All rights reserved.</div>
+      <div>Concept site · designed by Dumont Solutions</div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="fixed bottom-3 left-3 right-3 sm:hidden z-40 rounded-md bg-brand-500 text-ink font-semibold shadow-2xl flex">
+    <a href="tel:+14014901236" class="flex-1 text-center py-3.5">Call</a>
+    <a href="sms:+14014901236" class="flex-1 text-center py-3.5 border-l border-ink/20">Text</a>
+    <a href="#book" class="flex-1 text-center py-3.5 border-l border-ink/20">Quote</a>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Reveal-on-scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Quote form (demo)
+    document.getElementById('quote')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('quoteOk').classList.remove('hidden');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
