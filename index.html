@@ -296,50 +296,10 @@
         <p class="text-white/60 max-w-md text-[16px]">A recent interior detail — same vehicle, same day. No filters, no edits.</p>
       </div>
 
-      <!-- Before / After (cropped panels from the same composite) -->
-      <div class="reveal mt-10 grid md:grid-cols-2 gap-5">
-        <div class="rounded-xl overflow-hidden border border-line bg-surface">
-          <div class="relative aspect-[16/10] sm:aspect-[16/9]">
-            <div
-              class="absolute inset-0"
-              style="
-                background-image: url('img/before-after.png');
-                background-size: 200% auto;
-                background-position: left 20%;
-                background-repeat: no-repeat;
-              "
-              role="img"
-              aria-label="Before interior detail"
-            ></div>
-            <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute left-4 bottom-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line bg-ink/70 text-[12px] text-white/80 backdrop-blur">
-              <span class="w-1.5 h-1.5 rounded-full bg-white/60"></span>
-              Before
-            </div>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-line bg-surface">
-          <div class="relative aspect-[16/10] sm:aspect-[16/9]">
-            <div
-              class="absolute inset-0"
-              style="
-                background-image: url('img/before-after.png');
-                background-size: 200% auto;
-                background-position: right 20%;
-                background-repeat: no-repeat;
-              "
-              role="img"
-              aria-label="After interior detail"
-            ></div>
-            <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute left-4 bottom-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line bg-ink/70 text-[12px] text-white/80 backdrop-blur">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-              After
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Before / After (full image, no cropping) -->
+      <figure class="reveal mt-10 rounded-xl overflow-hidden border border-line bg-surface">
+        <img src="img/before-after.png" alt="Before and after interior detail" loading="lazy" class="w-full h-auto block" />
+      </figure>
     </div>
   </section>
 
