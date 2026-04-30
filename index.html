@@ -126,6 +126,7 @@
       <nav id="navDesktop" class="hidden md:flex items-center gap-8 text-[14px] text-white/70">
         <a href="#services" class="navlink press hover:text-white transition">Services</a>
         <a href="#work" class="navlink press hover:text-white transition">Our Work</a>
+        <a href="#memberships" class="navlink press hover:text-white transition">Memberships</a>
         <a href="#mobile" class="navlink press hover:text-white transition">Mobile</a>
         <a href="#reviews" class="navlink press hover:text-white transition">Reviews</a>
       </nav>
@@ -147,6 +148,7 @@
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-2 text-[15px] text-white/85">
         <a href="#services" class="navlink press py-2">Services</a>
         <a href="#work" class="navlink press py-2">Our Work</a>
+        <a href="#memberships" class="navlink press py-2">Memberships</a>
         <a href="#mobile" class="navlink press py-2">Mobile</a>
         <a href="#reviews" class="navlink press py-2">Reviews</a>
         <a href="#book" class="press mt-2 inline-flex items-center justify-center px-5 py-3 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">Get a Quote</a>
@@ -285,21 +287,90 @@
     </div>
   </section>
 
-  <!-- ─────────── BEFORE / AFTER + GALLERY ─────────── -->
+  <!-- ─────────── WORK GALLERY ─────────── -->
   <section id="work" class="py-24 lg:py-28 border-t border-line">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
       <div class="reveal flex flex-wrap items-end justify-between gap-6">
         <div class="max-w-xl">
-          <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Our Work</div>
-          <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">Real cars. Real results.</h2>
+          <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">See our work</div>
+          <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">Clean cars. Sharp details.</h2>
         </div>
-        <p class="text-white/60 max-w-md text-[16px]">A recent interior detail — same vehicle, same day. No filters, no edits.</p>
+        <p class="text-white/60 max-w-md text-[16px]">A few recent details — tap any photo to view full size.</p>
       </div>
 
-      <!-- Before / After (full image, no cropping) -->
-      <figure class="reveal mt-10 rounded-xl overflow-hidden border border-line bg-surface">
-        <img src="img/before-after.png" alt="Before and after interior detail" loading="lazy" class="w-full h-auto block" />
-      </figure>
+      <div class="reveal mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <button type="button" class="press img-hover text-left rounded-xl overflow-hidden border border-line bg-surface" data-lightbox="img/work-1.png" aria-label="Open work photo 1">
+          <div class="relative aspect-[4/5] sm:aspect-[16/11] lg:aspect-[4/5]">
+            <img src="img/work-1.png" alt="Clean interior detail" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+        </button>
+        <button type="button" class="press img-hover text-left rounded-xl overflow-hidden border border-line bg-surface" data-lightbox="img/work-2.png" aria-label="Open work photo 2">
+          <div class="relative aspect-[4/5] sm:aspect-[16/11] lg:aspect-[4/5]">
+            <img src="img/work-2.png" alt="Fresh interior detail" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+        </button>
+        <button type="button" class="press img-hover text-left rounded-xl overflow-hidden border border-line bg-surface" data-lightbox="img/work-3.png" aria-label="Open work photo 3">
+          <div class="relative aspect-[4/5] sm:aspect-[16/11] lg:aspect-[4/5]">
+            <img src="img/work-3.png" alt="Wheel and tire shine detail" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+        </button>
+        <button type="button" class="press img-hover text-left rounded-xl overflow-hidden border border-line bg-surface" data-lightbox="img/work-4.png" aria-label="Open work photo 4">
+          <div class="relative aspect-[4/5] sm:aspect-[16/11] lg:aspect-[4/5]">
+            <img src="img/work-4.png" alt="Finishing touches and fresh interior" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── MEMBERSHIPS ─────────── -->
+  <section id="memberships" class="py-24 lg:py-28 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="reveal flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-2xl">
+          <div class="text-brand-500 text-[12px] uppercase tracking-[0.22em] font-semibold">Memberships</div>
+          <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 leading-[1.1] tracking-tight">Keep it clean all year.</h2>
+          <p class="text-white/60 mt-4 text-[16px] leading-relaxed">Perfect for busy schedules — recurring maintenance details so your car stays spotless without thinking about it.</p>
+        </div>
+        <div class="reveal rounded-xl border border-line bg-surface p-6 max-w-md">
+          <div class="text-[12px] uppercase tracking-[0.18em] text-white/45 font-semibold">Member perks</div>
+          <ul class="mt-4 space-y-2 text-[14px] text-white/80">
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority scheduling</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consistent “fresh detail” look</li>
+            <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Easy recurring service</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-12">
+        <div class="reveal card rounded-xl border border-line bg-surface p-7 flex flex-col">
+          <div class="text-white/45 text-[12px] uppercase tracking-[0.18em] font-semibold">Monthly</div>
+          <div class="mt-4 text-2xl font-extrabold tracking-tight">Maintenance Detail</div>
+          <p class="text-white/60 text-[14px] mt-2 leading-relaxed">Best for daily drivers. Keeps interior + exterior consistently clean.</p>
+          <a href="#book" class="press mt-7 inline-flex items-center justify-center px-5 py-3 rounded-md border border-line text-white hover:bg-white/5 transition">Ask about Monthly</a>
+        </div>
+        <div class="reveal card featured relative rounded-xl border bg-surface p-7 flex flex-col">
+          <div class="absolute -top-2.5 left-7 px-2.5 py-0.5 rounded bg-brand-500 text-ink text-[11px] font-bold uppercase tracking-wider">Most popular</div>
+          <div class="text-brand-500 text-[12px] uppercase tracking-[0.18em] font-semibold">Bi-weekly</div>
+          <div class="mt-4 text-2xl font-extrabold tracking-tight">Always Clean</div>
+          <p class="text-white/65 text-[14px] mt-2 leading-relaxed">For families, pets, and commuters. Stays “just detailed” longer.</p>
+          <a href="#book" class="press mt-7 inline-flex items-center justify-center px-5 py-3 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">Ask about Bi-weekly</a>
+        </div>
+        <div class="reveal card rounded-xl border border-line bg-surface p-7 flex flex-col">
+          <div class="text-white/45 text-[12px] uppercase tracking-[0.18em] font-semibold">Fleet</div>
+          <div class="mt-4 text-2xl font-extrabold tracking-tight">Commercial</div>
+          <p class="text-white/60 text-[14px] mt-2 leading-relaxed">Multi-vehicle pricing for small businesses and work trucks.</p>
+          <a href="#book" class="press mt-7 inline-flex items-center justify-center px-5 py-3 rounded-md border border-line text-white hover:bg-white/5 transition">Ask about Fleet</a>
+        </div>
+      </div>
+
+      <div class="reveal mt-10 rounded-xl border border-line bg-ink p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <div class="text-white font-semibold">Want a membership quote?</div>
+          <div class="text-white/55 text-[14px] mt-1">Text a photo + your vehicle info and we’ll recommend the right plan.</div>
+        </div>
+        <a href="sms:+14014901236" class="press inline-flex items-center justify-center px-5 py-3 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">Text us</a>
+      </div>
     </div>
   </section>
 
@@ -555,7 +626,7 @@
     }
 
     // Scrollspy: highlight current section in nav
-    const sectionIds = ['services', 'work', 'mobile', 'reviews', 'book'];
+    const sectionIds = ['services', 'work', 'memberships', 'mobile', 'reviews', 'book'];
     const sectionEls = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -579,6 +650,48 @@
       { rootMargin: '-25% 0px -60% 0px', threshold: [0.05, 0.15, 0.3, 0.5] }
     );
     sectionEls.forEach((el) => spy.observe(el));
+
+    // Lightbox for work gallery
+    const lbButtons = Array.from(document.querySelectorAll('[data-lightbox]'));
+    if (lbButtons.length) {
+      const overlay = document.createElement('div');
+      overlay.id = 'lightbox';
+      overlay.className = 'hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm p-4';
+      overlay.innerHTML = `
+        <button type="button" id="lbClose" class="press absolute top-4 right-4 w-11 h-11 rounded-md border border-line bg-ink/70 text-white/80 hover:bg-white/5 transition" aria-label="Close image">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="w-full h-full grid place-items-center">
+          <img id="lbImg" alt="Work photo" class="max-w-full max-h-[85vh] rounded-xl border border-line bg-surface shadow-2xl" />
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      const img = overlay.querySelector('#lbImg');
+      const closeBtn = overlay.querySelector('#lbClose');
+
+      const open = (src) => {
+        if (!img || !src) return;
+        img.src = src;
+        overlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+        if (img) img.src = '';
+      };
+
+      lbButtons.forEach((btn) => {
+        btn.addEventListener('click', () => open(btn.getAttribute('data-lightbox')));
+      });
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+      });
+      closeBtn?.addEventListener('click', close);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+    }
 
     // Quote form (demo)
     document.getElementById('quote')?.addEventListener('submit', (e) => {
