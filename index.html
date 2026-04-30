@@ -63,6 +63,30 @@
 
     /* Nav glass */
     .nav { background: rgba(10,10,11,.7); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .navlink { position: relative; }
+    .navlink::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(148,228,88,0.0);
+      transform: scaleX(0.6);
+      opacity: 0;
+      transition: opacity .25s ease, transform .25s ease, background .25s ease;
+    }
+    .navlink.active { color: rgba(255,255,255,0.92); }
+    .navlink.active::after {
+      background: rgba(148,228,88,0.9);
+      transform: scaleX(1);
+      opacity: 1;
+    }
+
+    /* "Reactive" feel: press + subtle lift */
+    .press { transition: transform .12s ease, filter .12s ease; }
+    .press:active { transform: translateY(1px) scale(0.99); filter: brightness(0.98); }
 
     /* Form */
     .field {
@@ -99,15 +123,34 @@
           <div class="text-[10px] uppercase tracking-[0.2em] text-white/45 -mt-0.5">North Providence · RI</div>
         </div>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-[14px] text-white/70">
-        <a href="#services" class="hover:text-white transition">Services</a>
-        <a href="#work" class="hover:text-white transition">Our Work</a>
-        <a href="#mobile" class="hover:text-white transition">Mobile</a>
-        <a href="#reviews" class="hover:text-white transition">Reviews</a>
+      <nav id="navDesktop" class="hidden md:flex items-center gap-8 text-[14px] text-white/70">
+        <a href="#services" class="navlink press hover:text-white transition">Services</a>
+        <a href="#work" class="navlink press hover:text-white transition">Our Work</a>
+        <a href="#mobile" class="navlink press hover:text-white transition">Mobile</a>
+        <a href="#reviews" class="navlink press hover:text-white transition">Reviews</a>
       </nav>
-      <a href="#book" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-500 text-ink font-semibold text-[14px] hover:bg-brand-400 transition">
-        Get a Quote
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="#book" class="press hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-500 text-ink font-semibold text-[14px] hover:bg-brand-400 transition">
+          Get a Quote
+        </a>
+        <button id="menuBtn" type="button" class="press md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-line text-white/80 hover:bg-white/5 transition" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="navMobile" class="md:hidden hidden border-t border-line bg-ink/95 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-2 text-[15px] text-white/85">
+        <a href="#services" class="navlink press py-2">Services</a>
+        <a href="#work" class="navlink press py-2">Our Work</a>
+        <a href="#mobile" class="navlink press py-2">Mobile</a>
+        <a href="#reviews" class="navlink press py-2">Reviews</a>
+        <a href="#book" class="press mt-2 inline-flex items-center justify-center px-5 py-3 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">Get a Quote</a>
+      </div>
     </div>
   </header>
 
@@ -127,10 +170,10 @@
           Owner-operated mobile detailing for cars, SUVs, trucks, and motorcycles in North Providence and Mapleville. Hand wash, full interior, ceramic finish — done on-site by Cameron Geruso.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a href="#book" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">
+          <a href="#book" class="press inline-flex items-center gap-2 px-6 py-3.5 rounded-md bg-brand-500 text-ink font-semibold hover:bg-brand-400 transition">
             Get a Free Quote
           </a>
-          <a href="sms:+14014901236" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-line text-white hover:bg-white/5 transition">
+          <a href="sms:+14014901236" class="press inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-line text-white hover:bg-white/5 transition">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             401-490-1236
           </a>
@@ -299,7 +342,7 @@
       </div>
 
       <!-- Real photos from his portfolio -->
-      <div class="grid sm:grid-cols-2 gap-5 mt-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
         <div class="reveal img-hover rounded-xl overflow-hidden border border-line bg-surface">
           <div class="relative aspect-[16/11] sm:aspect-[16/10]">
             <img src="img/work-1.jpg" alt="Detailed Subaru interior" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center" />
@@ -308,6 +351,11 @@
         <div class="reveal img-hover rounded-xl overflow-hidden border border-line bg-surface">
           <div class="relative aspect-[16/11] sm:aspect-[16/10]">
             <img src="img/work-2.jpg" alt="Detailed sport interior with red accents" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+        </div>
+        <div class="reveal img-hover rounded-xl overflow-hidden border border-line bg-surface sm:col-span-2 lg:col-span-1">
+          <div class="relative aspect-[16/11] sm:aspect-[16/10]">
+            <img src="img/work-3.png" alt="Interior detail results preview" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-top" />
           </div>
         </div>
       </div>
@@ -541,6 +589,55 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navMobile = document.getElementById('navMobile');
+    const setMenuOpen = (open) => {
+      if (!menuBtn || !navMobile) return;
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navMobile.classList.toggle('hidden', !open);
+    };
+    if (menuBtn && navMobile) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+        setMenuOpen(!isOpen);
+      });
+      // Close after tapping a link
+      navMobile.querySelectorAll('a[href^=\"#\"]').forEach((a) => {
+        a.addEventListener('click', () => setMenuOpen(false));
+      });
+      // Close on escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setMenuOpen(false);
+      });
+    }
+
+    // Scrollspy: highlight current section in nav
+    const sectionIds = ['services', 'work', 'mobile', 'reviews', 'book'];
+    const sectionEls = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const allNavLinks = Array.from(document.querySelectorAll('a.navlink[href^=\"#\"]'));
+    const setActive = (id) => {
+      allNavLinks.forEach((a) => {
+        const href = a.getAttribute('href') || '';
+        a.classList.toggle('active', href === `#${id}`);
+      });
+    };
+
+    const spy = new IntersectionObserver(
+      (entries) => {
+        // pick the most visible intersecting section
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0))[0];
+        if (visible?.target?.id) setActive(visible.target.id);
+      },
+      { rootMargin: '-25% 0px -60% 0px', threshold: [0.05, 0.15, 0.3, 0.5] }
+    );
+    sectionEls.forEach((el) => spy.observe(el));
 
     // Quote form (demo)
     document.getElementById('quote')?.addEventListener('submit', (e) => {
